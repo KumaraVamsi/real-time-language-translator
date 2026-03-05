@@ -399,5 +399,8 @@ def history():
     return jsonify([{"spoken":c.spoken or "","translated":c.translated or "",
                      "time":c.created_at or ""} for c in rows])
 
+
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
