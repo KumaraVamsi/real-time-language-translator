@@ -12,4 +12,4 @@ googletrans==4.0.0-rc1
 gunicorn
 gtts
 flask_sqlalchemy
-werkzeug
+werkzeug 
