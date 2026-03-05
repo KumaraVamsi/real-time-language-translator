@@ -1,15 +1,10 @@
-# gtts
-# pygame
-# streamlit
-# speechrecognition
-# googletrans==3.1.0a0
-
-
-
-flask
-speechrecognition
+flask==3.0.3
+flask_sqlalchemy==3.1.1
+speechrecognition==3.14.5
 googletrans==4.0.0-rc1
-gunicorn
-gtts
-flask_sqlalchemy
-werkzeug 
+gtts==2.5.4
+textblob==0.17.1
+pydub==0.25.1
+gunicorn==21.2.0
+werkzeug==3.0.3
+requests==2.32.3
