@@ -400,4 +400,4 @@ def history():
                      "time":c.created_at or ""} for c in rows])
 
 if __name__ == "__main__":
-    app.run(debug=True, threaded=True)
+    app.run(host="0.0.0.0", port=5000)
