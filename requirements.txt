@@ -11,6 +11,5 @@ speechrecognition
 googletrans==4.0.0-rc1
 gtts
 pyaudio
-pygame
 flask_sqlalchemy
 werkzeug
