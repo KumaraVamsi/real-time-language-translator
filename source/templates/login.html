@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Blink Chat</title>
+
+<style>
+
+/* ===== Animated Gradient Background ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Glass Card ===== */
+.form-container {
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 1s ease forwards;
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== Heading ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* ===== Inputs ===== */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #00c6ff;
+    transform: scale(1.03);
+}
+
+/* ===== Button ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== Signup Link ===== */
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+
+a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <form method="POST">
+        <h2>Login</h2>
+
+        <input type="text" name="username" placeholder="Username" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+
+        <p>No account? <a href="/signup">Signup</a></p>
+    </form>
+</div>
+
+</body>
+</html>
