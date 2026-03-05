@@ -31,6 +31,8 @@ import os, uuid, secrets as _secrets, subprocess
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
+import sys
+import types
 
 from flask import (Flask, render_template, request, jsonify,
                    redirect, url_for, session, make_response)
@@ -398,7 +400,8 @@ def history():
             .limit(50).all())
     return jsonify([{"spoken":c.spoken or "","translated":c.translated or "",
                      "time":c.created_at or ""} for c in rows])
-
+if 'cgi' not in sys.modules:
+    sys.modules['cgi'] = types.ModuleType("cgi")
 
 
 if __name__ == "__main__":
